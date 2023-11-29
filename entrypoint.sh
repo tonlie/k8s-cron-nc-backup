@@ -1,27 +1,27 @@
 #!/bin/sh
 
-if [[ ${DB_HOST} == "" ]]; then
+if [ "${DB_HOST}" = "" ]; then
 	echo "Missing DB_HOST env variable"
 	exit 1
 fi
-if [[ ${DB_USER} == "" ]]; then
+if [ "${DB_USER}" = "" ]; then
 	echo "Missing DB_USER env variable"
 	exit 1
 fi
-if [[ ${DB_PASS} == "" ]]; then
+if [ "${DB_PASS}" = "" ]; then
 	echo "Missing DB_PASS env variable"
 	exit 1
 fi
 
-if [[ ${FTP_HOST} == "" ]]; then
+if [ "${FTP_HOST}" = "" ]; then
 	echo "Missing FTP_HOST env variable"
 	exit 1
 fi
-if [[ ${FTP_USER} == "" ]]; then
+if [ "${FTP_USER}" = "" ]; then
 	echo "Missing FTP_USER env variable"
 	exit 1
 fi
-if [[ ${FTP_PASS} == "" ]]; then
+if [ "${FTP_PASS}" = "" ]; then
 	echo "Missing FTP_PASS env variable"
 	exit 1
 fi
