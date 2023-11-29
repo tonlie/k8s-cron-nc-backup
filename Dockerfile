@@ -13,4 +13,6 @@ ENV DB_USER \
 
 RUN apk add rclone mysql-client
 
-ENTRYPOINT ["/entrypoint.sh"]
+COPY entrypoint.sh .
+
+ENTRYPOINT ["entrypoint.sh"]
