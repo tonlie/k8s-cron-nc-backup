@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:latest
 LABEL authors="tonlie"
 
 ADD "entrypoint.sh" "/"
@@ -12,7 +12,7 @@ ENV DB_USER \
     DB_HOST \
     FTP_USER \
     FTP_PASS \
-    FTP_HOST \
+    FTP_HOST
 
 RUN apk add rclone mysql-client
 
