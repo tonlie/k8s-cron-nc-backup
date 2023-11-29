@@ -1,6 +1,9 @@
 FROM alpine
 LABEL authors="tonlie"
 
+ADD "entrypoint.sh" "/"
+RUN chmod +x "/entrypoint.sh"
+
 WORKDIR /home/nextcloud
 
 ENV DB_USER \
@@ -12,7 +15,5 @@ ENV DB_USER \
     FTP_HOST \
 
 RUN apk add rclone mysql-client
-
-COPY entrypoint.sh .
 
 ENTRYPOINT ["./entrypoint.sh"]
