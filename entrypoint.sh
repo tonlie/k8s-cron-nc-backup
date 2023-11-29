@@ -26,6 +26,8 @@ if [ "${FTP_PASS}" = "" ]; then
 	exit 1
 fi
 
+sleep 60m
+
 # set config.php/maintenance to true
 sed -i "s/'maintenance' => false,/'maintenance' => true,/" config/config.php
 
