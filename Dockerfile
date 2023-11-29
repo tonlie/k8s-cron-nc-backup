@@ -1,4 +1,4 @@
-FROM alpinelinux
+FROM alpine
 LABEL authors="tonlie"
 
 WORKDIR /home/nextcloud
