@@ -32,7 +32,7 @@ sed -i "s/'maintenance' => false,/'maintenance' => true,/" config/config.php
 mysqldump -h "$DB_HOST" -u "$DB_USER" -p"$DB_PASS" --databases nextcloud mysql > nextcloudDB.dump
 
 # rsync nextcloud folders (at least config/, data/, theme/)
-rclone sync . :ftp,host="$FTP_HOST",user="$FTP_USER",pass=$(rclone obscure "$FTP_PASS"):nextcloud/ \
+rclone sync . :ftp,host="$FTP_HOST",user="$FTP_USER",pass="$(rclone obscure "$FTP_PASS")":nextcloud/ \
 --ignore-errors --exclude=custom_apps/ --exclude=root/ --exclude=tmp/ --exclude=".*"
 
 # set config.php/maintenance to false
